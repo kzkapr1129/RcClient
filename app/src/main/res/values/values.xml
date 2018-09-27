@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="settings_dlg_padding_left_right">24</integer>
+    <integer name="settings_dlg_padding_top_bottom">16</integer>
+    <integer name="settings_dlg_title_text_size_sp">18</integer>
+</resources>

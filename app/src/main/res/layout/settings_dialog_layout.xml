@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="25dp">
+
+    <TextView
+        android:id="@+id/mjpg_url_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center_vertical"
+        android:text="@string/mjpg_url"
+        app:layout_constraintEnd_toStartOf="@id/mjpg_url_edit"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/mjpg_url_edit"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="@string/mjpg_url_hint"
+        android:inputType="textUri"
+        app:layout_constraintBottom_toBottomOf="@+id/mjpg_url_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mjpg_url_label"
+        app:layout_constraintTop_toTopOf="@+id/mjpg_url_label"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/rc_url_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/rc_url"
+        app:layout_constraintStart_toStartOf="@+id/mjpg_url_label"
+        app:layout_constraintTop_toBottomOf="@+id/mjpg_url_edit" />
+
+    <EditText
+        android:id="@+id/rc_addr_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/rc_url_hint"
+        android:inputType="textUri"
+        app:layout_constraintBottom_toBottomOf="@+id/rc_url_label"
+        app:layout_constraintStart_toStartOf="@+id/mjpg_url_edit"
+        app:layout_constraintEnd_toStartOf="@+id/rc_port_edit"
+        app:layout_constraintHorizontal_weight="0.7"
+        app:layout_constraintTop_toTopOf="@+id/rc_url_label"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/rc_port_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:hint="@string/rc_port_hint"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toBottomOf="@+id/rc_addr_edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="0.3"
+        app:layout_constraintStart_toEndOf="@+id/rc_addr_edit"
+        app:layout_constraintTop_toTopOf="@+id/rc_addr_edit" />
+
+    <TextView
+        android:id="@+id/cam_size_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/cam_size"
+        app:layout_constraintStart_toStartOf="@+id/mjpg_url_label"
+        app:layout_constraintTop_toBottomOf="@+id/rc_addr_edit" />
+
+    <EditText
+        android:id="@+id/img_size_x_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/s640"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toBottomOf="@+id/cam_size_label"
+        app:layout_constraintStart_toStartOf="@+id/rc_addr_edit"
+        app:layout_constraintEnd_toStartOf="@+id/img_size_x_label"
+        app:layout_constraintTop_toTopOf="@+id/cam_size_label"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/img_size_x_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/x"
+        app:layout_constraintBottom_toBottomOf="@+id/cam_size_label"
+        app:layout_constraintStart_toEndOf="@+id/img_size_x_edit"
+        app:layout_constraintEnd_toStartOf="@+id/img_size_y_edit"
+        app:layout_constraintTop_toBottomOf="@+id/rc_addr_edit"/>
+
+    <EditText
+        android:id="@+id/img_size_y_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:text="@string/s480"
+        app:layout_constraintBottom_toBottomOf="@+id/img_size_x_edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_size_x_label"
+        app:layout_constraintTop_toTopOf="@+id/img_size_x_edit"
+        tools:ignore="LabelFor" />
+
+</android.support.constraint.ConstraintLayout>

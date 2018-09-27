@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">RcClient</string>
+    <string name="settins">Settings</string>
+    <string name="mjpg_url">Mjpeg URL</string>
+    <string name="rc_url">Rc URL</string>
+    <string name="cam_size">Img Size</string>
+    <string name="x">x</string>
+    <string name="s640">640</string>
+    <string name="s480">480</string>
+    <string name="mjpg_url_hint">http://192.168.11.3:8080/bin-cgi/stream</string>
+    <string name="rc_url_hint">192.168.11.3</string>
+    <string name="rc_port_hint">9024</string>
+</resources>
