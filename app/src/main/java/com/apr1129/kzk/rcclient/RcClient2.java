@@ -113,8 +113,10 @@ public class RcClient2 {
             }
         }
 
-        mPoolingHandlerThread.quit();
-        mPoolingHandler.removeCallbacks(mPoolingRunnable);
+        if (mPoolingHandlerThread != null) {
+            mPoolingHandlerThread.quit();
+            mPoolingHandler.removeCallbacks(mPoolingRunnable);
+        }
     }
 
     public void touchEvent(MotionEvent event) {
